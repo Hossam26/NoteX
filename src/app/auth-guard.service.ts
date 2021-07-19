@@ -6,9 +6,10 @@ import {BehaviorSubject, Observable } from 'rxjs';
 })
 export class AuthGuardService implements CanActivate {
   isLogin= new BehaviorSubject(false)
+  
   canActivate():boolean|Observable<any>{
-    let token=localStorage.getItem("token");
-    if (token){
+    let checked=localStorage.getItem("checked");
+    if (checked=="true"){
       this.isLogin.next(true)
       return true
     }
@@ -16,5 +17,12 @@ export class AuthGuardService implements CanActivate {
     this.isLogin.next(false)
     return false
   }
+  logout(){
+    localStorage.removeItem("token")
+    localStorage.removeItem("checked")
+    this.isLogin.next(false)
+    this._Router.navigateByUrl("/login")
+  }
+  
   constructor(private _Router:Router) { }
 }

@@ -7,7 +7,7 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Noxe';
+  title = 'Noted';
   
   constructor(private router: Router) { }
 

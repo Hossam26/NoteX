@@ -19,11 +19,10 @@ export class NavbarComponent implements OnInit {
     
   }
  
-logout(){
-  localStorage.removeItem("token")
-  this._AuthGuardService.isLogin.next(false)
-  this._Router.navigateByUrl("/login")
-}
+  logout(){
+    this._AuthGuardService.logout();
+  }
+
 targetInfo(eventInfo:any){
   this.target=eventInfo.target.value
 }

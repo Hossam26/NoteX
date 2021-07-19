@@ -26,11 +26,13 @@ export class LoginComponent implements OnInit {
     this._AuthService.loginData(this.loginForm.value).subscribe((data)=>{
       
       if(data.message=="success"){
-         localStorage.setItem("token","true")
+         localStorage.setItem("checked","true")
+         localStorage.setItem("token",data.token)
+
          this._Toastr.success(`Welcome ${data.user.first_name}`)
          this._AuthGuardService.isLogin.next(true)
          this.Spinner.hide()
-         this._Router.navigateByUrl("/home")
+         this._Router.navigateByUrl("/profile")
 
        }
        else{

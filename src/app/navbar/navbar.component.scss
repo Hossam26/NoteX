@@ -2,14 +2,15 @@
 
 
 .navbar{
-    background-color: $lightBgColor;
+    background-color: $bgColor;
+    border-bottom: 1px solid gray;
     .nav-link{
         color: $fontColor;
     }
     
-        a:hover, .active{
+        a, a:hover, .active{
         
-            color: red;
+            color: yellow;
         
     }
     .navbar-toggler{
