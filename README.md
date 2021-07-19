@@ -3,8 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
 
 ## Overview
-An application that basiclly helps you with taking notes, deleting and editing them.
-
+This website is basically helping you with note-taking, editing, and deleting them. It comes with the capability of opening your account from different devices and accessing your notes.
 ## Implemented and Learned Topics
 
 ### I learned and enhanced...
